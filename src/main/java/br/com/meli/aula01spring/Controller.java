@@ -63,8 +63,7 @@ public class Controller {
     @RequestMapping("/ed1/{p}")
     @ResponseBody
     public String endpoint1(@PathVariable String p) {
-        //return "Nosso primeiro endpoint";
-        //return "{'id': '1', 'nome': 'teste'}";
+
         int num = Integer.parseInt(p);
 
 
@@ -74,11 +73,8 @@ public class Controller {
     @RequestMapping("/ed2/{p}")
     @ResponseBody
     public String endpoint2(@PathVariable String p) {
-        //return "Nosso primeiro endpoint";
-        //return "{'id': '1', 'nome': 'teste'}"
 
-        // Morse code by indexing
-        String[] code
+        String[] morse
                 = { ".-",   "-...", "-.-.", "-..",  ".",
                 "..-.", "--.",  "....", "..",   ".---",
                 "-.-",  ".-..", "--",   "-.",   "---",
@@ -86,14 +82,10 @@ public class Controller {
                 "..-",  "...-", ".--",  "-..-", "-.--",
                 "--..", "|" };
 
-        // Given Strings
-        String morseCode = "... -.-. .... --- --- .-..";
 
         System.out.println();
 
-        // English to morse code
-
-        return "recebido: " + p + " retornando:" + (conversorMorse(code, p));
+        return "recebido: " + p + " retornando:" + (conversorMorse(morse, p));
     }
 
 }
