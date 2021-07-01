@@ -1,0 +1,10 @@
+GET /products -> 200 OK
+getAll
+GET /products/{id} -> 200 OK
+getbyid
+POST /products ->201 CREATED / 200 OK / 4xx
+PUT /products/{id} -> 200 ok / 4xx
+PATCH /products/{id} -> 200 OK / 4xx
+Partialupdate
+DELETE /products/{id} -> 200 OK / 204 NO CONTENT / 4xx
+Deletebyid
